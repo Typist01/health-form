@@ -2,9 +2,11 @@
 
 #### Project Overview
 
-This project involves building a health care application featuring a form questionnaire with branching logic. The application is developed using Typescript for both frontend and backend. React is used for the frontend, while NodeJS serves as the backend. Data is stored and retrieved from a MySQL database. Unit tests are implemented to ensure the functionality and reliability of the application.
+This project involves building a health care application featuring a form questionnaire with branching logic. The application is developed using Typescript for both frontend and backend. React is used for the frontend, while NodeJS serves as the backend. Data is stored and retrieved from a MySQL database. Unit and integration tests are implemented to ensure the functionality and reliability of the application.
 
-![image of an online healthcare form](image.png)
+![alt text](image-3.png)
+![alt text](image-4.png)
+![alt text](image-5.png)
 
 #### Features
 
@@ -15,9 +17,9 @@ Database: MySQL
 Unit Testing
 Loading and success states
 
-![alt text](image-2.png)
+![alt text](image-6.png)
 
-![alt text](image-1.png)
+![alt text](image-7.png)
 
 #### Installation
 
@@ -42,6 +44,37 @@ npm install
 - Start both frontend and backend services with: `npm run dev` in the frontend folder and `npm start` in the backend.
 
 - The application should now be running on ports 8080 (backend) and 5137 (frontend).
+
+#### Api routes:
+
+##### /questionnaires (POST):
+
+###### Expected request body:
+
+{
+name: string;
+age: number;
+gender: string;
+healthCondition: string;
+symptomsExperienced?: boolean;
+symptoms?: string;
+}
+
+###### Expected response code: 204
+
+##### /questionnaires (GET):
+
+###### Expected response structure:
+
+{
+name: string,
+age: int,
+gender: 'Male' | 'Female' | 'Not_specified',
+healthCondition: 'Healthy' | 'Minor_illness' | 'Chronic_illness',
+symptomsExperienced: boolean,
+symptoms: string,
+createdAt: DateTime,
+}
 
 Database Schema:
 
@@ -75,4 +108,4 @@ enum HealthCondition {
 ```
 
 Technologies used:
-React, Tailwind, TypeScript, MySQL, Prisma, Vite, Express, Jest, Docker,
+React, Tailwind, TypeScript, MySQL, Prisma, Vite, Express, Jest, Docker, react-hook-form
