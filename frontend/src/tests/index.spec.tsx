@@ -1,9 +1,9 @@
 import "@testing-library/jest-dom";
 import { cleanup, render, screen } from "@testing-library/react";
-import HealthForm, { FormTypes } from "../HealthForm";
-import ChronicIllnessForm from "../ChronicIllnessForm";
 import { FormProvider, useForm } from "react-hook-form";
 import { ReactNode } from "react";
+import HealthForm, { FormTypes } from "@/HealthForm/HealthForm";
+import ChronicIllnessForm from "@/HealthForm/ChronicIllnessForm";
 
 afterEach(cleanup);
 
