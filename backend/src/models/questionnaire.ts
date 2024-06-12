@@ -1,5 +1,3 @@
-// src/models/questionnaireModel.ts
-
 import { Gender, HealthCondition } from "@prisma/client";
 
 export interface Questionnaire {

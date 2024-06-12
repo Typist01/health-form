@@ -1,7 +1,6 @@
 import { Gender, HealthCondition } from "@prisma/client";
-import { validateReqBody } from "../validation";
+import { validateReqBody } from "../../validation";
 
-// validation.test.ts
 describe("validateReqBody", () => {
   test("should throw error if name is not present", () => {
     expect(() => validateReqBody({ age: 25, gender: Gender.Male })).toThrow(

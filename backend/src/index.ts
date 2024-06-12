@@ -4,17 +4,17 @@ import dotenv from "dotenv";
 import {
   getAllQuestionaires,
   saveQuestionnaire,
-} from "./controllers/questionnaire.js";
-import { validateReqBody } from "./validation.js";
+} from "./controllers/questionnaire";
+import { validateReqBody } from "./validation";
 import cors from "cors";
 
 dotenv.config();
 
-const app = express();
+export const app = express();
 const port = process.env.SERVER_PORT;
 
 const corsOptions = {
-  origin: "*",
+  origin: "*", // in staging/production should restrict this to just the frontend
   optionsSuccessStatus: 200,
 };
 
@@ -25,9 +25,8 @@ app.use(express.json());
 app.post("/questionnaires", async (req, res) => {
   try {
     validateReqBody(req.body);
-    saveQuestionnaire(req.body);
+    await saveQuestionnaire(req.body);
   } catch (e) {
-    console.log(e);
     res.status(500);
     res.send("failed to save questionaire");
     return;

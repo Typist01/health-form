@@ -1,5 +1,5 @@
 import { QuestionnaireDb } from "../models/questionnaire.js";
-import prisma from "../utils/prisma.js";
+import prisma from "../utils/prisma";
 
 export const createQuestionnaire = async (questionnaire: QuestionnaireDb) => {
   try {
