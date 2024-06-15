@@ -13,9 +13,10 @@ This project involves building a health care application featuring a form questi
 - Form Questionnaire with Branching Logic
 - Loading and success states
 - Unit & Integration Testing
+- Database: MySQL
+
 - Frontend: React with Typescript
 - Backend: NodeJS with Typescript
-- Database: MySQL
 
 ![alt text](image-6.png)
 
@@ -121,3 +122,12 @@ enum HealthCondition {
 
 Technologies used:
 React, Tailwind, TypeScript, MySQL, Prisma, Vite, Express, Jest, Docker, react-hook-form
+
+##### Run backend tests:
+
+1. Ensure that the database service is running (you can run an isolated instance by running the docker-compose file within the db-service directory at the root)
+2. run `npm run test`
+
+##### Run frontend tests:
+
+1. Run `npm run test` in the frontend folder
