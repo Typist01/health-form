@@ -10,12 +10,12 @@ This project involves building a health care application featuring a form questi
 
 #### Features
 
-Form Questionnaire with Branching Logic
-Frontend: React with Typescript
-Backend: NodeJS with Typescript
-Database: MySQL
-Unit Testing
-Loading and success states
+- Form Questionnaire with Branching Logic
+- Loading and success states
+- Unit & Integration Testing
+- Frontend: React with Typescript
+- Backend: NodeJS with Typescript
+- Database: MySQL
 
 ![alt text](image-6.png)
 

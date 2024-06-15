@@ -26,7 +26,7 @@ export const saveQuestionnaire = async (questionnaire: Questionnaire) => {
       symptoms: questionnaire.symptoms,
     };
 
-    db.createQuestionnaire(dbQuestionnaire);
+    await db.createQuestionnaire(dbQuestionnaire);
   } catch (e) {
     throw new Error("Submitting questionnaire");
   }
@@ -34,7 +34,7 @@ export const saveQuestionnaire = async (questionnaire: Questionnaire) => {
 
 export const getAllQuestionaires = async (questionnaire: Questionnaire) => {
   try {
-    const questionaires = db.getAllQuestionaires();
+    const questionaires = await db.getAllQuestionaires();
     return questionaires;
   } catch (e) {
     throw new Error("Getting questionnaire");

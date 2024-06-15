@@ -194,10 +194,11 @@ const config: Config = {
 
   // Whether to use watchman for file crawling
   // watchman: true,
+  maxWorkers: 1,
   transform: {
     "\\.[jt]sx?$": "ts-jest",
   },
-
+  forceExit: true,
   extensionsToTreatAsEsm: [".ts"],
 };
 
