@@ -23,7 +23,15 @@ Loading and success states
 
 #### Installation
 
-##### Prerequisites
+#### Easy set up with docker
+
+1. Ensure you have Docker running, [install here](https://www.docker.com/get-started/)
+2. Build images with `docker-compose build` at the root of the project
+3. Run `docker-compose up`
+
+Frontend should run on port 3000, and backend on port 8080.
+
+##### Manual / Dev set up
 
 Clone the repository and install frontend and backend dependencies:
 
@@ -43,7 +51,7 @@ npm install
 
 - Start both frontend and backend services with: `npm run dev` in the frontend folder and `npm start` in the backend.
 
-- The application should now be running on ports 8080 (backend) and 5137 (frontend).
+- The application should now be running on ports 8080 (backend) and 3000 (frontend).
 
 #### Api routes:
 
@@ -51,6 +59,7 @@ npm install
 
 ###### Expected request body:
 
+```
 {
 name: string;
 age: number;
@@ -59,6 +68,7 @@ healthCondition: string;
 symptomsExperienced?: boolean;
 symptoms?: string;
 }
+```
 
 ###### Expected response code: 204
 
@@ -66,6 +76,7 @@ symptoms?: string;
 
 ###### Expected response structure:
 
+```
 {
 name: string,
 age: int,
@@ -75,6 +86,7 @@ symptomsExperienced: boolean,
 symptoms: string,
 createdAt: DateTime,
 }
+```
 
 Database Schema:
 
