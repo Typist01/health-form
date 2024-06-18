@@ -131,3 +131,6 @@ React, Tailwind, TypeScript, MySQL, Prisma, Vite, Express, Jest, Docker, react-h
 ##### Run frontend tests:
 
 1. Run `npm run test` in the frontend folder
+
+Note: error handling atm returns 500 for invalid form data for which 400 is more appropriate. I've left it as 500 for the moment until I can come up with a good pattern to follow for error handling in express.
+.env files should only be used for local development, terraform can be used to fetch secrets from AWS which should not be exposed in the frontend project.
